@@ -5,6 +5,12 @@ const tourSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
+  duration: {
+    type: String,
+  },
+  summary: {
+    type: string,
+  },
   rating: {
     type: Number,
     default: 4.5,
