@@ -6,7 +6,7 @@ const router = express.Router();
 //   console.log(`tour id is ${val}`);
 //   next();
 // });
-
+router.route('/getTourStats').get(tourController.getTourStats)
 router
   .route("/")
   .get(tourController.getAlltours)
