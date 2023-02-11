@@ -9,7 +9,7 @@ const tourSchema = new mongoose.Schema({
     type: String,
   },
   summary: {
-    type: string,
+    type: String,
   },
   rating: {
     type: Number,
