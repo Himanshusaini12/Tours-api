@@ -4,12 +4,12 @@ const bcrypt = require('bcryptjs')
 const userSchema =new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please enter your name']
+   
   },
 
   email: {
     type: String,
-    required: [true, 'Please enter your email'],
+   
     unique: true,
     lowercase: true,
     validate: [validator.isEmail, 'Please enter a valid email address']
@@ -18,13 +18,13 @@ const userSchema =new mongoose.Schema({
  
   password: {
     type: String,
-    required: [true, 'Please provide a password'],
+    
     minlength: 8,
     
   },
   passwordConfirm: {
     type: String,
-    required: [true, 'Please confirm your password'],
+   
     validate:{
         validator:function(el){
             return el ===this.password
@@ -46,3 +46,4 @@ const userSchema =new mongoose.Schema({
 
 const User = mongoose.model('User',userSchema)
 module.exports=User;
+
